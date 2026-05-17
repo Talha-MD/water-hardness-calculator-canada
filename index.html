@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water Hardness Calculator Guelph</title>
+  <style>
+    body{
+      font-family: Arial;
+      max-width:700px;
+      margin:auto;
+      padding:40px;
+      background:#f4f4f4;
+    }
 
+    .box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      margin-bottom:20px;
+    }
+
+    button{
+      padding:12px 20px;
+      background:#0077cc;
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+
+    h1{
+      color:#0077cc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+
+<h1>Water Hardness Calculator</h1>
+
+<p>Enter your water hardness level (PPM):</p>
+
+<input type="number" id="ppm" placeholder="Example: 180">
+
+<button onclick="checkHardness()">Check Water Type</button>
+
+<h2 id="result"></h2>
+
+<hr>
+
+<h2>About Hard Water in Guelph</h2>
+
+<p>
+Hard water is a common issue in Guelph, Ontario. High mineral levels can cause scale buildup, dry skin, appliance damage, and plumbing issues.
+</p>
+
+<p>
+Installing a professional <a href="https://YOURWEBSITE.COM">water softener guelph</a> solution can help improve water quality and protect your home appliances from mineral buildup.
+</p>
+
+<p>
+Common signs of hard water include:
+</p>
+
+<ul>
+<li>White spots on dishes</li>
+<li>Soap not lathering properly</li>
+<li>Dry skin and hair</li>
+<li>Scale buildup on faucets</li>
+<li>Reduced appliance efficiency</li>
+</ul>
+
+</div>
+
+<script>
+
+function checkHardness(){
+
+let ppm = document.getElementById("ppm").value;
+
+let result = "";
+
+if(ppm < 60){
+  result = "Soft Water";
+}
+else if(ppm < 120){
+  result = "Moderately Hard Water";
+}
+else if(ppm < 180){
+  result = "Hard Water";
+}
+else{
+  result = "Very Hard Water";
+}
+
+document.getElementById("result").innerHTML = result;
+
+}
+
+</script>
+
+</body>
+</html>
